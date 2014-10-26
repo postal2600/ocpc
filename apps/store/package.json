@@ -1,0 +1,6 @@
+{
+    "name": "Web Store",
+    "version": "0.0.1",
+    "main": "https://chrome.google.com/webstore/category/collection/offline_enabled",
+    "icon": "icon.png"
+}

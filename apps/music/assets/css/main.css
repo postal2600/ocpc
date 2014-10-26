@@ -1,0 +1,193 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body
+{
+    height: 100%;
+    overflow: hidden;
+}
+
+body
+{
+    font-family: OpenSans, sans-serif;
+    color: #c0c0c0;
+    background-image: linear-gradient(#1E2527, #0A0C0D);
+}
+
+#topBar
+{
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #3e3e3e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+    #topBar #nowPlaying
+    {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 30px;
+        padding: 0 15px;
+        display: none;
+    }
+
+    body.playing:not(.playerOpened) #topBar #nowPlaying
+    {
+        display: block;
+    }
+
+
+#playlist
+{
+    text-align: center;
+    height: 100%;
+    overflow-y: hidden;
+    display: block;
+}
+
+    #playlist .mCSB_container
+    {
+        padding-top: 50px;
+    }
+
+    #playlist .mCSB_scrollTools .mCSB_draggerContainer
+    {
+        top: 60px;
+        bottom: 10px;
+    }
+
+    #playlist .song
+    {
+        display: inline-block;
+        text-align: center;
+        margin: 10px;
+        width: 256px;
+        height: 256px;
+        position: relative;
+        cursor: pointer
+    }
+
+        .song img
+        {
+            width: 256px;
+            height: 256px;
+        }
+
+        .song .songInfo
+        {
+            position: absolute;
+            display: table-cell;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 75px;
+            line-height: 75px;
+            background-color: rgba(0,0,0, 0.5);
+            padding: 5px;
+        }
+
+            .songInfo span
+            {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 22px
+            }
+
+#playerOverlay
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2600;
+    display: none;
+}
+
+body.playerOpened #playerOverlay
+{
+    display: block;
+}
+
+#player
+{
+    position: relative;
+    width: 960px;
+    height: 350px;
+    margin: 0 auto;
+    border: 1px solid #8f8f8f;
+    padding: 22px;
+    box-sizing: border-box;
+    z-index: 2601;
+    background-image: linear-gradient(#1E2527, #0A0C0D);
+    margin-top: 10%;
+}
+
+    #player #coverArt
+    {
+        display: table-cell;
+        width: 480px;
+    }
+
+    #player #controls
+    {
+        width: 480px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+        #controls #songTitle
+        {
+            font-size: 22px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #controls #progressBar
+        {
+            border: 1px solid #c0c0c0;
+            height: 30px;
+            width: 100%;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+            #progressBar #progressFill
+            {
+                height: 100%;
+                width: 0;
+                background-color: #c0c0c0;
+                position: relative;
+            }
+
+            #progressFill #currentTime
+            {
+                position: absolute;
+                right: 0;
+                bottom: 100%;
+                height: 22px;
+                border-right: 1px solid #c0c0c0;
+                line-height: 12px;
+            }
+
+        #controls button
+        {
+            width: 50px;
+            height: 50px;
+        }
+
+        #controls #pauseBtn
+        {
+            display: none;
+        }

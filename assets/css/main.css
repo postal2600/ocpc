@@ -1,0 +1,42 @@
+body
+{
+    background: url("../img/default_wallpaper.jpg");
+    font-family: OpenSans;
+}
+
+#springboard
+{
+    overflow: hidden;
+}
+
+    #springboard .app
+    {
+        float: left;
+        margin: 20px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #springboard .app .appIcon
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+    #springboard .app .appName
+    {
+        color: #fff;
+        font-weight: 600;
+        text-shadow: 1px 1px 5px #000;
+    }
+
+body iframe.appContainer
+{
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}

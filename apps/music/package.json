@@ -1,0 +1,7 @@
+{
+    "name": "Music",
+    "version": "0.0.1",
+    "app_id": "com.ocpc.music",
+    "icon": "assets/img/icon.png",
+    "main": "index.html"
+}
